@@ -1,0 +1,11 @@
+# ignore directories and files
+.idea
+target
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.iml
+/.project
+/.settings/

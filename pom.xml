@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.iootc.lab</groupId>
+    <artifactId>iootc-algorithms-lab</artifactId>
+    <packaging>pom</packaging>
+    <version>${revision}</version>
+
+    <name>${artifactId}</name>
+    <description>Algorithm Lab</description>
+    <url>https://github.com/iootclab/iootc-algorithms-lab</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <revision>1.0.0</revision>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+
+        <guava.version>29.0-jre</guava.version>
+        <lombok.version>1.18.12</lombok.version>
+        <commons-lang3.version>3.11</commons-lang3.version>
+    </properties>
+
+    <modules>
+        <module>iootc-coding-interview-guide</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <url>${nexus.releases.url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <url>${nexus.snapshots.url}</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>
