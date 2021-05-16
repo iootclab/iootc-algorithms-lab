@@ -1,5 +1,7 @@
 package com.iootc.lab.algocasts;
 
+import com.iootc.lab.domain.TreeNode;
+
 import java.util.Stack;
 
 /**
@@ -25,19 +27,6 @@ import java.util.Stack;
  * @since 2021-05-13 23:40
  */
 public class Question4 {
-
-    public class TreeNode {
-
-        private int value;
-
-        private TreeNode left;
-
-        private TreeNode right;
-
-        public TreeNode(int x) {
-            this.value = x;
-        }
-    }
 
     private boolean isSymmetric(TreeNode s, TreeNode t) {
         if (s != null && t != null) {
